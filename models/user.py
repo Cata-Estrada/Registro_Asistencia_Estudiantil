@@ -38,3 +38,11 @@ class User:
         if row:
             return User(*row)
         return None
+    
+    @staticmethod
+    def delete(user_id):
+        conn = get_connection()
+        cursor = conn.cursor()
+        cursor.execute("DELETE FROM Usuario WHERE id_usuario=?", (user_id,))
+        conn.commit()
+        conn.close()
