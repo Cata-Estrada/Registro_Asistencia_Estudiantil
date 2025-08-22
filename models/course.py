@@ -23,3 +23,22 @@ class Course:
             )
         conn.commit()
         conn.close()
+
+    @staticmethod
+    def get_all_by_user(user_id):
+        conn = get_connection()
+        cursor = conn.cursor()
+        cursor.execute(
+            "SELECT id_curso, nombre_curso, tipo, id_usuario FROM Curso WHERE id_usuario=?",
+            (user_id,))
+        rows = cursor.fetchall()
+        conn.close()
+        return [Course(*row) for row in rows]
+
+    @staticmethod
+    def delete(course_id):
+        conn = get_connection()
+        cursor = conn.cursor()
+        cursor.execute("DELETE FROM Curso WHERE id_curso=?", (course_id,))
+        conn.commit()
+        conn.close()
