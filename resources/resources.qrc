@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/icons8-cursos-50 (1).png</file>
+    <file>icons/icons8-casa-50 (1).png</file>
+    <file>icons/icons8-asistencia-50.png</file>
+    <file>icons/icons8-estadística-64.png</file>
+    <file>icons/icons8-estudiante-masculino-50.png</file>
+    <file>icons/icons8-gráfico-de-salud-50.png</file>
+    <file>icons/icons8-registro-50.png</file>
+    <file>icons/icons8-casa-50.png</file>
+    <file>icons/icons8-signo-de-interrogación-30.png</file>
+    <file>icons/icons8-asistencia-50.png</file>
+    <file>icons/icons8-buscar-30.png</file>
+    <file>icons/icons8-cursos-50.png</file>
+    <file>icons/icons8-historia-de-la-actividad-50.png</file>
+    <file>icons/icons8-inscripción-50.png</file>
+    <file>icons/icons8-menú-30.png</file>
+    <file>icons/icons8-salida-30.png</file>
+    <file>icons/icons8-usuario-30.png</file>
+  </qresource>
+</RCC>
