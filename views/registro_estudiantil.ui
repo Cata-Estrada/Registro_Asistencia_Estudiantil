@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>registro_estudiantil</class>
+ <widget class="QWidget" name="registro_estudiantil">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>398</width>
+    <height>402</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="titulo_Registro_estudiantil">
+       <property name="text">
+        <string>Registro Estudiantil</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLineEdit" name="nombre_curso"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="agregar_curso">
+         <property name="text">
+          <string>Agregar Curso </string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QComboBox" name="selecionar_curso">
+       <property name="placeholderText">
+        <string>Seleccione el curso</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableView" name="tableView"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="cargar_lista_estudiantes">
+         <property name="text">
+          <string>Cargar lista de estudiantes </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="guardar_lista_curso">
+         <property name="text">
+          <string>Guardar lista del curso </string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
