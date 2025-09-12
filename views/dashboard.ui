@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>DashboardController</class>
+ <widget class="QWidget" name="DashboardController">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,339 +11,254 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Dashboard</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <property name="leftMargin">
-     <number>0</number>
-    </property>
-    <property name="topMargin">
-     <number>0</number>
-    </property>
-    <property name="rightMargin">
-     <number>0</number>
-    </property>
-    <property name="bottomMargin">
-     <number>0</number>
-    </property>
-    <property name="spacing">
-     <number>0</number>
-    </property>
-    <item row="0" column="1">
-     <widget class="QWidget" name="widget_2" native="true">
-      <property name="minimumSize">
-       <size>
-        <width>250</width>
-        <height>0</height>
-       </size>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="1">
+    <widget class="QWidget" name="widget_2" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>250</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="logo_2">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="../resources/resources.qrc">:/icons/icons/icons8-signo-de-interrogación-30.png</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="Manu">
+          <property name="text">
+           <string>Menú</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="inicio_2">
+          <property name="text">
+           <string>Inicio</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-casa-50 (1).png</normaloff>:/icons/icons/icons8-casa-50 (1).png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="curso_2">
+          <property name="text">
+           <string>Curso</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-cursos-50 (1).png</normaloff>:/icons/icons/icons8-cursos-50 (1).png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="registro_estudiantil_2">
+          <property name="text">
+           <string>Registro Estudiantil</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-estudiante-masculino-50.png</normaloff>:/icons/icons/icons8-estudiante-masculino-50.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="registro_asistencia_2">
+          <property name="text">
+           <string>Registro Asistencia</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-registro-50.png</normaloff>:/icons/icons/icons8-registro-50.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="historial_3">
+          <property name="text">
+           <string>Historial</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-gráfico-de-salud-50.png</normaloff>:/icons/icons/icons8-gráfico-de-salud-50.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="reportes_3">
+          <property name="text">
+           <string>Reportes</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-estadística-64.png</normaloff>:/icons/icons/icons8-estadística-64.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>277</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="salir_2">
+        <property name="text">
+         <string>Salir</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../resources/resources.qrc">
+          <normaloff>:/icons/icons/icons8-salida-30.png</normaloff>:/icons/icons/icons8-salida-30.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QWidget" name="widget_3" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,0">
+      <property name="spacing">
+       <number>0</number>
       </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>16777215</height>
-       </size>
+      <property name="leftMargin">
+       <number>0</number>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_5">
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_5">
-         <item>
-          <widget class="QLabel" name="logo_2">
-           <property name="text">
-            <string/>
-           </property>
-           <property name="pixmap">
-            <pixmap resource="../resources/resources.qrc">:/icons/icons/icons8-signo-de-interrogación-30.png</pixmap>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="Manu">
-           <property name="text">
-            <string>Menú</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
          <property name="spacing">
+          <number>6</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
           <number>0</number>
          </property>
          <item>
-          <widget class="QPushButton" name="inicio_2">
-           <property name="text">
-            <string>Inicio</string>
-           </property>
-           <property name="icon">
-            <iconset resource="../resources/resources.qrc">
-             <normaloff>:/icons/icons/icons8-casa-50 (1).png</normaloff>:/icons/icons/icons8-casa-50 (1).png</iconset>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="curso_2">
-           <property name="text">
-            <string>Curso</string>
-           </property>
-           <property name="icon">
-            <iconset resource="../resources/resources.qrc">
-             <normaloff>:/icons/icons/icons8-cursos-50 (1).png</normaloff>:/icons/icons/icons8-cursos-50 (1).png</iconset>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="registro_estudiantil_2">
-           <property name="text">
-            <string>Registro Estudiantil</string>
-           </property>
-           <property name="icon">
-            <iconset resource="../resources/resources.qrc">
-             <normaloff>:/icons/icons/icons8-estudiante-masculino-50.png</normaloff>:/icons/icons/icons8-estudiante-masculino-50.png</iconset>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="registro_asistencia_2">
-           <property name="text">
-            <string>Registro Asistencia</string>
-           </property>
-           <property name="icon">
-            <iconset resource="../resources/resources.qrc">
-             <normaloff>:/icons/icons/icons8-registro-50.png</normaloff>:/icons/icons/icons8-registro-50.png</iconset>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="historial_3">
-           <property name="text">
-            <string>Historial</string>
-           </property>
-           <property name="icon">
-            <iconset resource="../resources/resources.qrc">
-             <normaloff>:/icons/icons/icons8-gráfico-de-salud-50.png</normaloff>:/icons/icons/icons8-gráfico-de-salud-50.png</iconset>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="reportes_3">
-           <property name="text">
-            <string>Reportes</string>
-           </property>
-           <property name="icon">
-            <iconset resource="../resources/resources.qrc">
-             <normaloff>:/icons/icons/icons8-estadística-64.png</normaloff>:/icons/icons/icons8-estadística-64.png</iconset>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <spacer name="verticalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>277</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QPushButton" name="salir_2">
-         <property name="text">
-          <string>Salir</string>
-         </property>
-         <property name="icon">
-          <iconset resource="../resources/resources.qrc">
-           <normaloff>:/icons/icons/icons8-salida-30.png</normaloff>:/icons/icons/icons8-salida-30.png</iconset>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="0" column="2">
-     <widget class="QWidget" name="widget_3" native="true">
-      <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,0">
-       <property name="spacing">
-        <number>0</number>
-       </property>
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QWidget" name="widget" native="true">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <property name="spacing">
-           <number>6</number>
-          </property>
-          <property name="leftMargin">
-           <number>0</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
-          <item>
-           <widget class="QPushButton" name="hamburguesa">
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="../resources/resources.qrc">
-              <normaloff>:/icons/icons/icons8-menú-30.png</normaloff>:/icons/icons/icons8-menú-30.png</iconset>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <property name="autoExclusive">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item>
-        <widget class="QStackedWidget" name="stackedWidget">
-         <property name="currentIndex">
-          <number>4</number>
-         </property>
-         <widget class="QWidget" name="Inicio">
-          <layout class="QHBoxLayout" name="horizontalLayout_19"/>
-         </widget>
-         <widget class="QWidget" name="Curso">
-          <layout class="QGridLayout" name="gridLayout_2"/>
-         </widget>
-         <widget class="QWidget" name="Inscripcion">
-          <layout class="QGridLayout" name="gridLayout_7"/>
-         </widget>
-         <widget class="QWidget" name="Asistencia">
-          <layout class="QGridLayout" name="gridLayout_3"/>
-         </widget>
-         <widget class="QWidget" name="historial">
-          <layout class="QGridLayout" name="gridLayout_5"/>
-         </widget>
-         <widget class="QWidget" name="reportes"/>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QWidget" name="icon_only_widget" native="true">
-      <property name="minimumSize">
-       <size>
-        <width>150</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>50</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-       <property name="spacing">
-        <number>0</number>
-       </property>
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_3">
-         <item>
-          <widget class="QLabel" name="logo">
+          <widget class="QPushButton" name="hamburguesa">
            <property name="text">
             <string/>
            </property>
-           <property name="pixmap">
-            <pixmap resource="../resources/resources.qrc">:/icons/icons/icons8-signo-de-interrogación-30.png</pixmap>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/icons/icons/icons8-menú-30.png</normaloff>:/icons/icons/icons8-menú-30.png</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
          <item>
-          <spacer name="horizontalSpacer_3">
+          <spacer name="horizontalSpacer">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
@@ -356,156 +271,228 @@
           </spacer>
          </item>
         </layout>
-       </item>
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <property name="spacing">
-          <number>0</number>
-         </property>
-         <item>
-          <widget class="QPushButton" name="inicio">
-           <property name="text">
-            <string/>
-           </property>
-           <property name="icon">
-            <iconset resource="../resources/resources.qrc">
-             <normaloff>:/icons/icons/icons8-casa-50 (1).png</normaloff>:/icons/icons/icons8-casa-50 (1).png</iconset>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="curso">
-           <property name="text">
-            <string/>
-           </property>
-           <property name="icon">
-            <iconset resource="../resources/resources.qrc">
-             <normaloff>:/icons/icons/icons8-cursos-50 (1).png</normaloff>:/icons/icons/icons8-cursos-50 (1).png</iconset>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="registro_estudiantil">
-           <property name="text">
-            <string/>
-           </property>
-           <property name="icon">
-            <iconset resource="../resources/resources.qrc">
-             <normaloff>:/icons/icons/icons8-estudiante-masculino-50.png</normaloff>:/icons/icons/icons8-estudiante-masculino-50.png</iconset>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="registro_asistencia">
-           <property name="text">
-            <string/>
-           </property>
-           <property name="icon">
-            <iconset resource="../resources/resources.qrc">
-             <normaloff>:/icons/icons/icons8-registro-50.png</normaloff>:/icons/icons/icons8-registro-50.png</iconset>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="historial_2">
-           <property name="text">
-            <string/>
-           </property>
-           <property name="icon">
-            <iconset resource="../resources/resources.qrc">
-             <normaloff>:/icons/icons/icons8-gráfico-de-salud-50.png</normaloff>:/icons/icons/icons8-gráfico-de-salud-50.png</iconset>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="reportes_2">
-           <property name="text">
-            <string/>
-           </property>
-           <property name="icon">
-            <iconset resource="../resources/resources.qrc">
-             <normaloff>:/icons/icons/icons8-estadística-64.png</normaloff>:/icons/icons/icons8-estadística-64.png</iconset>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-           <property name="autoExclusive">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>313</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QPushButton" name="salir">
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="../resources/resources.qrc">
-           <normaloff>:/icons/icons/icons8-salida-30.png</normaloff>:/icons/icons/icons8-salida-30.png</iconset>
-         </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QStackedWidget" name="stackedWidget">
+        <property name="currentIndex">
+         <number>4</number>
+        </property>
+        <widget class="QWidget" name="Inicio">
+         <layout class="QHBoxLayout" name="horizontalLayout_19"/>
         </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>808</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+        <widget class="QWidget" name="Curso">
+         <layout class="QGridLayout" name="gridLayout_2"/>
+        </widget>
+        <widget class="QWidget" name="Inscripcion">
+         <layout class="QGridLayout" name="gridLayout_7"/>
+        </widget>
+        <widget class="QWidget" name="Asistencia">
+         <layout class="QGridLayout" name="gridLayout_3"/>
+        </widget>
+        <widget class="QWidget" name="historial">
+         <layout class="QGridLayout" name="gridLayout_5"/>
+        </widget>
+        <widget class="QWidget" name="reportes"/>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QWidget" name="icon_only_widget" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="logo">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="../resources/resources.qrc">:/icons/icons/icons8-signo-de-interrogación-30.png</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="inicio">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-casa-50 (1).png</normaloff>:/icons/icons/icons8-casa-50 (1).png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="curso">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-cursos-50 (1).png</normaloff>:/icons/icons/icons8-cursos-50 (1).png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="registro_estudiantil">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-estudiante-masculino-50.png</normaloff>:/icons/icons/icons8-estudiante-masculino-50.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="registro_asistencia">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-registro-50.png</normaloff>:/icons/icons/icons8-registro-50.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="historial_2">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-gráfico-de-salud-50.png</normaloff>:/icons/icons/icons8-gráfico-de-salud-50.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="reportes_2">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-estadística-64.png</normaloff>:/icons/icons/icons8-estadística-64.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>313</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="salir">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../resources/resources.qrc">
+          <normaloff>:/icons/icons/icons8-salida-30.png</normaloff>:/icons/icons/icons8-salida-30.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources>
   <include location="../resources/resources.qrc"/>
