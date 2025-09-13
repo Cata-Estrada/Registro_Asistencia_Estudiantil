@@ -6,7 +6,6 @@ from PyQt5.QtCore import Qt
 from models.course import Course
 from models.student import Student
 from models.enrollment import Enrollment
-# controllers/registro_estudiantil_controller.py
 from utils.cvs_utils import cargar_estudiantes_desde_csv
 from utils.paths import rel_path
 

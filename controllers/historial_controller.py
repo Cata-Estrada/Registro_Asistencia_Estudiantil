@@ -33,11 +33,11 @@ class HistorialController(QtWidgets.QWidget):
 
         # 🔹 Filtros: curso -> historial completo; fecha -> solo esa fecha; búsqueda por nombre
         self.seleccione_curso.currentIndexChanged.connect(self.on_curso_cambiado)
-        self.seleccione_curso.activated.connect(self.on_curso_cambiado)  # 👈 se ejecuta incluso si seleccionas el mismo curso
+        self.seleccione_curso.activated.connect(self.on_curso_cambiado)  #se ejecuta incluso si seleccionas el mismo curso
 
         self.fecha_asistencia.dateChanged.connect(self.on_fecha_cambiada)
-        self.fecha_asistencia.userDateChanged.connect(self.on_fecha_cambiada)  # 👈 se ejecuta siempre que el usuario cambia la fecha
-        self.fecha_asistencia.editingFinished.connect(self.on_fecha_cambiada)  # 👈 incluso si escribe la misma fecha
+        self.fecha_asistencia.userDateChanged.connect(self.on_fecha_cambiada)  #se ejecuta siempre que el usuario cambia la fecha
+        self.fecha_asistencia.editingFinished.connect(self.on_fecha_cambiada)  #incluso si escribe la misma fecha
 
         self.buscar.clicked.connect(self.historial_por_nombre)
 
