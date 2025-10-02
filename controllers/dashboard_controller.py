@@ -1,8 +1,10 @@
+# controllers/dashboard_controller.py
 from PyQt5 import QtWidgets, uic, QtCore
 from controllers.registro_estudiantil_controller import RegistroEstudiantilController
 from controllers.registro_asistencia_controller import RegistroAsistenciaController
 from controllers.historial_controller import HistorialController
 from controllers.reportes_controller import ReportesController
+from controllers.curso_controller import CursoController
 
 
 class DashboardController(QtWidgets.QWidget):
@@ -16,12 +18,12 @@ class DashboardController(QtWidgets.QWidget):
         self.icon_only_widget.setVisible(False)
         self.widget_2.setVisible(True)
 
-        # Carga las páginas internas
+        # Páginas
         self.page_inicio = QtWidgets.QWidget()
         uic.loadUi("views/inicio.ui", self.page_inicio)
 
-        self.page_curso = QtWidgets.QWidget()
-        uic.loadUi("views/curso.ui", self.page_curso)
+        # Usar el controlador de cursos (no el .ui plano)
+        self.page_curso = CursoController(user_id)
 
         self.page_inscripcion = RegistroEstudiantilController(user_id)
         self.page_asistencia = RegistroAsistenciaController(user_id)
@@ -43,13 +45,21 @@ class DashboardController(QtWidgets.QWidget):
         self.historial_3.toggled.connect(lambda checked: self.setPage(4) if checked else None)
         self.reportes_2.toggled.connect(lambda checked: self.setPage(5) if checked else None)
 
-        # Botón para cerrar sesión
+        # Botón para cerrar sesión (menú abierto)
         self.salir_2.clicked.connect(self.handle_logout)
+
+        # Botón para cerrar sesión (menú compacto) -> AJUSTE CLAVE
+        # Reemplaza 'salir_icon_only' por el objectName real del botón de salir en icon_only_widget.
+        if hasattr(self, "salir_icon_only"):
+            self.salir_icon_only.clicked.connect(self.handle_logout)
 
         # Botón hamburguesa para alternar sidebars
         self.hamburguesa.toggled.connect(self.toggle_sidebars)
 
         self.inicio_2.setChecked(True)
+
+        # INYECTAR CALLBACK: al crear curso en registro, añadirlo en caliente en cursos
+        self.page_inscripcion.set_curso_creado_callback(self.page_curso.on_curso_creado_externo)
 
     def toggle_sidebars(self, checked):
         # Mostrar sidebar compacto si hamburguesa está activado, sino sidebar completo
