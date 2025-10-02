@@ -6,18 +6,29 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>398</width>
-    <height>402</height>
+    <width>912</width>
+    <height>559</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(240, 244, 251);</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <widget class="QLabel" name="titulo_Registro_estudiantil">
+       <property name="styleSheet">
+        <string notr="true">color: #4154F1;
+font-family: &quot;Open Sans&quot;;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;</string>
+       </property>
        <property name="text">
         <string>Registro Estudiantil</string>
        </property>
@@ -26,10 +37,42 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QLineEdit" name="nombre_curso"/>
+        <widget class="QLineEdit" name="nombre_curso">
+         <property name="styleSheet">
+          <string notr="true">border-radius: 4px;
+width: 100px;
+height: 27px;
+border: 1px solid #CED4DA;
+background: #FFF;
+color: #444;
+
+font-family: &quot;Open Sans&quot;;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QPushButton" name="agregar_curso">
+         <property name="styleSheet">
+          <string notr="true">display: flex;
+padding: 9px 20px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+border-radius: 8px;
+background: #4154F1;
+color: #FFF;
+font-family: Roboto;
+font-size: 12px;
+font-style: normal;
+line-height: normal;</string>
+         </property>
          <property name="text">
           <string>Agregar Curso </string>
          </property>
@@ -39,18 +82,52 @@
      </item>
      <item>
       <widget class="QComboBox" name="selecionar_curso">
+       <property name="styleSheet">
+        <string notr="true">width: 100px;
+height: 25px;
+flex-shrink: 0;
+border-radius: 6px;
+border: 1px solid #CED4DA;
+background: #FFF;
+color: #444;
+font-family: &quot;Open Sans&quot;;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;</string>
+       </property>
        <property name="placeholderText">
         <string>Seleccione el curso</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QTableView" name="tableView"/>
+      <widget class="QTableView" name="tableView">
+       <property name="styleSheet">
+        <string notr="true">border-radius: 8px;
+background: #FFF;</string>
+       </property>
+      </widget>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
         <widget class="QPushButton" name="cargar_lista_estudiantes">
+         <property name="styleSheet">
+          <string notr="true">display: flex;
+width: 100px;
+height: 25px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+border-radius: 8px;
+background: #4154F1;
+color: #FFF;
+font-family: Roboto;
+font-size: 12px;
+font-style: normal;
+line-height: normal;</string>
+         </property>
          <property name="text">
           <string>Cargar lista de estudiantes </string>
          </property>
@@ -58,6 +135,21 @@
        </item>
        <item>
         <widget class="QPushButton" name="guardar_lista_curso">
+         <property name="styleSheet">
+          <string notr="true">display: flex;
+width: 100px;
+height: 25px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+border-radius: 8px;
+background: #3BAE7E;
+color: #FFF;
+font-family: Roboto;
+font-size: 12px;
+font-style: normal;
+line-height: normal;</string>
+         </property>
          <property name="text">
           <string>Guardar lista del curso </string>
          </property>
