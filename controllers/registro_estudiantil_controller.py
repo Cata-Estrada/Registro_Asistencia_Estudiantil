@@ -1,10 +1,14 @@
+# controllers/registro_estudiantil_controller.py
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from models.course import Course
 from models.student import Student
 from models.enrollment import Enrollment
-from utils.cvs_utils import cargar_estudiantes_desde_csv
-
+# Verifica el nombre correcto del módulo: csv_utils vs cvs_utils
+try:
+    from utils.csv_utils import cargar_estudiantes_desde_csv
+except ImportError:
+    from utils.cvs_utils import cargar_estudiantes_desde_csv  # fallback si tu archivo se llama así
 
 class RegistroEstudiantilController(QtWidgets.QWidget):
     def __init__(self, user_id):
@@ -12,15 +16,25 @@ class RegistroEstudiantilController(QtWidgets.QWidget):
         uic.loadUi("views/registro_estudiantil.ui", self)
         self.user_id = user_id
 
+        # Callback opcional inyectado desde el Dashboard para notificar creación de cursos
+        self._curso_creado_cb = None
+
+        # Modelo de la tabla de estudiantes
         self.model = QStandardItemModel()
         self.model.setHorizontalHeaderLabels(["Nombre del Estudiante", "Número de identificación"])
         self.tableView.setModel(self.model)
 
+        # Cargar cursos al inicio
         self.load_courses()
 
+        # Conexiones UI
         self.agregar_curso.clicked.connect(self.add_course)
         self.cargar_lista_estudiantes.clicked.connect(self.cargar_estudiantes_csv)
         self.guardar_lista_curso.clicked.connect(self.save_students)
+
+    def set_curso_creado_callback(self, cb):
+        """Inyectado por el Dashboard: cb recibe un objeto Course recién creado."""
+        self._curso_creado_cb = cb
 
     def load_courses(self):
         self.selecionar_curso.clear()
@@ -42,20 +56,21 @@ class RegistroEstudiantilController(QtWidgets.QWidget):
         nuevo_curso = Course(course_name=course_name, course_type="", user_id=self.user_id)
         nuevo_curso.save()
 
+        # Notificar en caliente a CursoController (si está conectado)
+        if self._curso_creado_cb:
+            self._curso_creado_cb(nuevo_curso)
+
         self.nombre_curso.clear()
         self.load_courses()
-
         QtWidgets.QMessageBox.information(self, "Éxito", "Curso agregado correctamente")
 
     def cargar_estudiantes_csv(self):
         ruta_csv, _ = QtWidgets.QFileDialog.getOpenFileName(self, "Selecciona un CSV", ".", "Archivos CSV (*.csv)")
         if ruta_csv:
             estudiantes = cargar_estudiantes_desde_csv(ruta_csv, parent=self)
-
             if estudiantes is None:
-                # Hubo error o campo vacío, ya se mostró mensaje en la función
+                # Hubo error o campo vacío, ya se mostró mensaje
                 return
-
             self.model.setRowCount(0)
             for cedula, nombre in estudiantes:
                 fila = [QStandardItem(nombre), QStandardItem(cedula)]
