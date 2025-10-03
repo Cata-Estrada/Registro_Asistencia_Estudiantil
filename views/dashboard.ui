@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>808</width>
-    <height>504</height>
+    <width>780</width>
+    <height>491</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,178 +29,6 @@
    <property name="spacing">
     <number>0</number>
    </property>
-   <item row="0" column="1">
-    <widget class="QWidget" name="widget_2" native="true">
-     <property name="minimumSize">
-      <size>
-       <width>250</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>16777215</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_5">
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_5">
-        <item>
-         <widget class="QLabel" name="logo_2">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="pixmap">
-           <pixmap resource="../resources/resources.qrc">:/icons/icons/icons8-signo-de-interrogación-30.png</pixmap>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="Manu">
-          <property name="text">
-           <string>Menú</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_3">
-        <property name="spacing">
-         <number>0</number>
-        </property>
-        <item>
-         <widget class="QPushButton" name="inicio_2">
-          <property name="text">
-           <string>Inicio</string>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources/resources.qrc">
-            <normaloff>:/icons/icons/icons8-casa-50 (1).png</normaloff>:/icons/icons/icons8-casa-50 (1).png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="curso_2">
-          <property name="text">
-           <string>Curso</string>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources/resources.qrc">
-            <normaloff>:/icons/icons/icons8-cursos-50 (1).png</normaloff>:/icons/icons/icons8-cursos-50 (1).png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="registro_estudiantil_2">
-          <property name="text">
-           <string>Registro Estudiantil</string>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources/resources.qrc">
-            <normaloff>:/icons/icons/icons8-estudiante-masculino-50.png</normaloff>:/icons/icons/icons8-estudiante-masculino-50.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="registro_asistencia_2">
-          <property name="text">
-           <string>Registro Asistencia</string>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources/resources.qrc">
-            <normaloff>:/icons/icons/icons8-registro-50.png</normaloff>:/icons/icons/icons8-registro-50.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="historial_3">
-          <property name="text">
-           <string>Historial</string>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources/resources.qrc">
-            <normaloff>:/icons/icons/icons8-gráfico-de-salud-50.png</normaloff>:/icons/icons/icons8-gráfico-de-salud-50.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="reportes_3">
-          <property name="text">
-           <string>Reportes</string>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources/resources.qrc">
-            <normaloff>:/icons/icons/icons8-estadística-64.png</normaloff>:/icons/icons/icons8-estadística-64.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <spacer name="verticalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>277</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="salir_2">
-        <property name="text">
-         <string>Salir</string>
-        </property>
-        <property name="icon">
-         <iconset resource="../resources/resources.qrc">
-          <normaloff>:/icons/icons/icons8-salida-30.png</normaloff>:/icons/icons/icons8-salida-30.png</iconset>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
    <item row="0" column="2">
     <widget class="QWidget" name="widget_3" native="true">
      <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,0">
@@ -221,27 +49,33 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>40</height>
+          <height>50</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(25, 58, 115);</string>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
          <property name="spacing">
           <number>6</number>
          </property>
          <property name="leftMargin">
-          <number>0</number>
+          <number>10</number>
          </property>
          <property name="topMargin">
           <number>0</number>
          </property>
          <property name="rightMargin">
-          <number>0</number>
+          <number>15</number>
          </property>
          <property name="bottomMargin">
           <number>0</number>
          </property>
          <item>
           <widget class="QPushButton" name="hamburguesa">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -270,11 +104,25 @@
            </property>
           </spacer>
          </item>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+font: 700 18pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>AsisTrack</string>
+           </property>
+          </widget>
+         </item>
         </layout>
        </widget>
       </item>
       <item>
        <widget class="QStackedWidget" name="stackedWidget">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(246, 249, 255);</string>
+        </property>
         <property name="currentIndex">
          <number>4</number>
         </property>
@@ -303,7 +151,7 @@
     <widget class="QWidget" name="icon_only_widget" native="true">
      <property name="minimumSize">
       <size>
-       <width>150</width>
+       <width>100</width>
        <height>0</height>
       </size>
      </property>
@@ -312,6 +160,9 @@
        <width>50</width>
        <height>16777215</height>
       </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_4">
       <property name="spacing">
@@ -331,13 +182,44 @@
       </property>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
         <item>
          <widget class="QLabel" name="logo">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>80</height>
+           </size>
+          </property>
           <property name="text">
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap resource="../resources/resources.qrc">:/icons/icons/icons8-signo-de-interrogación-30.png</pixmap>
+           <pixmap resource="../resources/resources.qrc">:/icons/icons/logo_AsisTrack.jpg</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -359,10 +241,33 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <property name="spacing">
-         <number>0</number>
+         <number>10</number>
         </property>
         <item>
          <widget class="QPushButton" name="inicio">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: none;                 /* Sin borde */
+    background-color: white;      /* Fondo blanco por defecto */
+    color: #012970;               /* Texto azul oscuro */
+    padding: 8px 16px;
+    border-radius: 6px;           /* Opcional: esquinas redondeadas */
+}
+
+QPushButton:hover {
+    background-color: #F6F9FF;    /* Fondo hover */
+    color: #012970;               /* Texto hover */
+}
+
+QPushButton:pressed {
+    background-color: #e0e6f9;    /* Fondo al presionar (ligeramente más oscuro) */
+    color: #012970;
+}
+</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -380,6 +285,26 @@
         </item>
         <item>
          <widget class="QPushButton" name="curso">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: none;                 /* Sin borde */
+    background-color: white;      /* Fondo blanco por defecto */
+    color: #012970;               /* Texto azul oscuro */
+    padding: 8px 16px;
+    border-radius: 6px;           /* Opcional: esquinas redondeadas */
+}
+
+QPushButton:hover {
+    background-color: #F6F9FF;    /* Fondo hover */
+    color: #012970;               /* Texto hover */
+}
+
+QPushButton:pressed {
+    background-color: #e0e6f9;    /* Fondo al presionar (ligeramente más oscuro) */
+    color: #012970;
+}
+</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -397,6 +322,26 @@
         </item>
         <item>
          <widget class="QPushButton" name="registro_estudiantil">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: none;                 /* Sin borde */
+    background-color: white;      /* Fondo blanco por defecto */
+    color: #012970;               /* Texto azul oscuro */
+    padding: 8px 16px;
+    border-radius: 6px;           /* Opcional: esquinas redondeadas */
+}
+
+QPushButton:hover {
+    background-color: #F6F9FF;    /* Fondo hover */
+    color: #012970;               /* Texto hover */
+}
+
+QPushButton:pressed {
+    background-color: #e0e6f9;    /* Fondo al presionar (ligeramente más oscuro) */
+    color: #012970;
+}
+</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -414,6 +359,26 @@
         </item>
         <item>
          <widget class="QPushButton" name="registro_asistencia">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: none;                 /* Sin borde */
+    background-color: white;      /* Fondo blanco por defecto */
+    color: #012970;               /* Texto azul oscuro */
+    padding: 8px 16px;
+    border-radius: 6px;           /* Opcional: esquinas redondeadas */
+}
+
+QPushButton:hover {
+    background-color: #F6F9FF;    /* Fondo hover */
+    color: #012970;               /* Texto hover */
+}
+
+QPushButton:pressed {
+    background-color: #e0e6f9;    /* Fondo al presionar (ligeramente más oscuro) */
+    color: #012970;
+}
+</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -431,6 +396,26 @@
         </item>
         <item>
          <widget class="QPushButton" name="historial_2">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: none;                 /* Sin borde */
+    background-color: white;      /* Fondo blanco por defecto */
+    color: #012970;               /* Texto azul oscuro */
+    padding: 8px 16px;
+    border-radius: 6px;           /* Opcional: esquinas redondeadas */
+}
+
+QPushButton:hover {
+    background-color: #F6F9FF;    /* Fondo hover */
+    color: #012970;               /* Texto hover */
+}
+
+QPushButton:pressed {
+    background-color: #e0e6f9;    /* Fondo al presionar (ligeramente más oscuro) */
+    color: #012970;
+}
+</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -448,6 +433,26 @@
         </item>
         <item>
          <widget class="QPushButton" name="reportes_2">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: none;                 /* Sin borde */
+    background-color: white;      /* Fondo blanco por defecto */
+    color: #012970;               /* Texto azul oscuro */
+    padding: 8px 16px;
+    border-radius: 6px;           /* Opcional: esquinas redondeadas */
+}
+
+QPushButton:hover {
+    background-color: #F6F9FF;    /* Fondo hover */
+    color: #012970;               /* Texto hover */
+}
+
+QPushButton:pressed {
+    background-color: #e0e6f9;    /* Fondo al presionar (ligeramente más oscuro) */
+    color: #012970;
+}
+</string>
+          </property>
           <property name="text">
            <string/>
           </property>
@@ -480,6 +485,26 @@
       </item>
       <item>
        <widget class="QPushButton" name="salir">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    border: none;                 /* Sin borde */
+    background-color: white;      /* Fondo blanco por defecto */
+    color: #012970;               /* Texto azul oscuro */
+    padding: 8px 16px;
+    border-radius: 6px;           /* Opcional: esquinas redondeadas */
+}
+
+QPushButton:hover {
+    background-color: #F6F9FF;    /* Fondo hover */
+    color: #012970;               /* Texto hover */
+}
+
+QPushButton:pressed {
+    background-color: #e0e6f9;    /* Fondo al presionar (ligeramente más oscuro) */
+    color: #012970;
+}
+</string>
+        </property>
         <property name="text">
          <string/>
         </property>
@@ -489,6 +514,387 @@
         </property>
        </widget>
       </item>
+      <item>
+       <spacer name="verticalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QWidget" name="widget_2" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>200</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>30</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>13</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="logo_4">
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../resources/resources.qrc">:/icons/icons/logo_AsisTrack.jpg</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="Manu_3">
+            <property name="styleSheet">
+             <string notr="true">font: 700 16pt &quot;Segoe UI&quot;;
+color: #012970;</string>
+            </property>
+            <property name="text">
+             <string>Menú</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="inicio_2">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: none;                 /* Sin borde */
+    background-color: white;      /* Fondo blanco por defecto */
+    color: #012970;               /* Texto azul oscuro */
+    padding: 8px 16px;
+    border-radius: 6px;           /* Opcional: esquinas redondeadas */
+}
+
+QPushButton:hover {
+    background-color: #F6F9FF;    /* Fondo hover */
+    color: #012970;               /* Texto hover */
+}
+
+QPushButton:pressed {
+    background-color: #e0e6f9;    /* Fondo al presionar (ligeramente más oscuro) */
+    color: #012970;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Inicio</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-casa-50 (1).png</normaloff>:/icons/icons/icons8-casa-50 (1).png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="curso_2">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: none;                 /* Sin borde */
+    background-color: white;      /* Fondo blanco por defecto */
+    color: #012970;               /* Texto azul oscuro */
+    padding: 8px 16px;
+    border-radius: 6px;           /* Opcional: esquinas redondeadas */
+}
+
+QPushButton:hover {
+    background-color: #F6F9FF;    /* Fondo hover */
+    color: #012970;               /* Texto hover */
+}
+
+QPushButton:pressed {
+    background-color: #e0e6f9;    /* Fondo al presionar (ligeramente más oscuro) */
+    color: #012970;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Curso</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-cursos-50 (1).png</normaloff>:/icons/icons/icons8-cursos-50 (1).png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="registro_estudiantil_2">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: none;                 /* Sin borde */
+    background-color: white;      /* Fondo blanco por defecto */
+    color: #012970;               /* Texto azul oscuro */
+    padding: 8px 16px;
+    border-radius: 6px;           /* Opcional: esquinas redondeadas */
+}
+
+QPushButton:hover {
+    background-color: #F6F9FF;    /* Fondo hover */
+    color: #012970;               /* Texto hover */
+}
+
+QPushButton:pressed {
+    background-color: #e0e6f9;    /* Fondo al presionar (ligeramente más oscuro) */
+    color: #012970;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Registro Estudiantil</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-estudiante-masculino-50.png</normaloff>:/icons/icons/icons8-estudiante-masculino-50.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="registro_asistencia_2">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: none;                 /* Sin borde */
+    background-color: white;      /* Fondo blanco por defecto */
+    color: #012970;               /* Texto azul oscuro */
+    padding: 8px 16px;
+    border-radius: 6px;           /* Opcional: esquinas redondeadas */
+}
+
+QPushButton:hover {
+    background-color: #F6F9FF;    /* Fondo hover */
+    color: #012970;               /* Texto hover */
+}
+
+QPushButton:pressed {
+    background-color: #e0e6f9;    /* Fondo al presionar (ligeramente más oscuro) */
+    color: #012970;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Registro Asistencia</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-registro-50.png</normaloff>:/icons/icons/icons8-registro-50.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="historial_3">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: none;                 /* Sin borde */
+    background-color: white;      /* Fondo blanco por defecto */
+    color: #012970;               /* Texto azul oscuro */
+    padding: 8px 16px;
+    border-radius: 6px;           /* Opcional: esquinas redondeadas */
+}
+
+QPushButton:hover {
+    background-color: #F6F9FF;    /* Fondo hover */
+    color: #012970;               /* Texto hover */
+}
+
+QPushButton:pressed {
+    background-color: #e0e6f9;    /* Fondo al presionar (ligeramente más oscuro) */
+    color: #012970;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Historial</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-gráfico-de-salud-50.png</normaloff>:/icons/icons/icons8-gráfico-de-salud-50.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="reportes_3">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: none;                 /* Sin borde */
+    background-color: white;      /* Fondo blanco por defecto */
+    color: #012970;               /* Texto azul oscuro */
+    padding: 8px 16px;
+    border-radius: 6px;           /* Opcional: esquinas redondeadas */
+}
+
+QPushButton:hover {
+    background-color: #F6F9FF;    /* Fondo hover */
+    color: #012970;               /* Texto hover */
+}
+
+QPushButton:pressed {
+    background-color: #e0e6f9;    /* Fondo al presionar (ligeramente más oscuro) */
+    color: #012970;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Reportes</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/icons/icons/icons8-estadística-64.png</normaloff>:/icons/icons/icons8-estadística-64.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>277</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="salir_2">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    border: none;                 /* Sin borde */
+    background-color: white;      /* Fondo blanco por defecto */
+    color: #012970;               /* Texto azul oscuro */
+    padding: 8px 16px;
+    border-radius: 6px;           /* Opcional: esquinas redondeadas */
+}
+
+QPushButton:hover {
+    background-color: #F6F9FF;    /* Fondo hover */
+    color: #012970;               /* Texto hover */
+}
+
+QPushButton:pressed {
+    background-color: #e0e6f9;    /* Fondo al presionar (ligeramente más oscuro) */
+    color: #012970;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Salir</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../resources/resources.qrc">
+          <normaloff>:/icons/icons/icons8-salida-30.png</normaloff>:/icons/icons/icons8-salida-30.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
      </layout>
     </widget>
    </item>
@@ -496,7 +902,7 @@
  </widget>
  <resources>
   <include location="../resources/resources.qrc"/>
-  <include location="../resources/resources.qrc"/>
+  <include location="resources/resources.qrc"/>
  </resources>
  <connections>
   <connection>

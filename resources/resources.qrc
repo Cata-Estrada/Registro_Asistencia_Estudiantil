@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="icons">
+    <file>icons/icono_de_flecha.png</file>
+    <file>icons/logo_AsisTrack2.png</file>
+    <file>icons/logo_AsisTrack.jpg</file>
     <file>icons/icons8-cursos-50 (1).png</file>
     <file>icons/icons8-casa-50 (1).png</file>
     <file>icons/icons8-asistencia-50.png</file>
