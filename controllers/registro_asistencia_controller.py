@@ -1,3 +1,4 @@
+# controllers/registro_asistencia_controller.py
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from PyQt5.QtWidgets import QComboBox, QStyledItemDelegate, QHeaderView
@@ -101,6 +102,11 @@ class RegistroAsistenciaController(QtWidgets.QWidget):
         self.seleccione_curso.setCurrentIndex(0)
 
     def load_students_for_course(self):
+        """
+        Cargar los estudiantes de la matrícula actualizada.
+        Si ya existe asistencia, se usa el estado guardado.
+        Si no, se asigna "presente" por defecto.
+        """
         self.model.setRowCount(0)
 
         course_id = self.seleccione_curso.currentData()
@@ -109,15 +115,20 @@ class RegistroAsistenciaController(QtWidgets.QWidget):
 
         fecha = self.fecha_clase.date().toString("yyyy-MM-dd")
 
+        # Obtener todos los estudiantes matriculados
         students = Enrollment.get_students_by_course(course_id)
+
+        # Buscar sesión de clase (si existe)
         class_session = ClassSession.get_by_date_and_course(fecha, course_id)
 
+        # Cargar asistencias existentes
         asistencia_por_cedula = {}
         if class_session:
             asistencias = Attendance.get_by_class(class_session.class_id)
             for a in asistencias:
                 asistencia_por_cedula[a.student_id] = a.status
 
+        # Crear filas → matrícula manda, asistencia complementa
         for cedula, nombre in students:
             estado = asistencia_por_cedula.get(cedula, "presente")
             fila = [
@@ -131,11 +142,9 @@ class RegistroAsistenciaController(QtWidgets.QWidget):
                 it.setTextAlignment(Qt.AlignCenter)
             self.model.appendRow(fila)
 
-        # Reajuste por si el contenedor cambió de tamaño
         self._apply_proportional_resize()
 
     def _apply_proportional_resize(self):
-        # Mantener el modo Stretch en todas las columnas para proporcionalidad
         hh = self.tableView.horizontalHeader()
         hh.setSectionResizeMode(0, QHeaderView.Stretch)
         hh.setSectionResizeMode(1, QHeaderView.Stretch)
