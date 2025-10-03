@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>537</width>
+    <width>602</width>
     <height>364</height>
    </rect>
   </property>
@@ -22,12 +22,10 @@
      <item>
       <widget class="QLabel" name="titulo_registro_asistencia">
        <property name="styleSheet">
-        <string notr="true">color: #4154F1;
-font-family: Nunito;
-font-size: 18px;
-font-style: normal;
-font-weight: 600;
-line-height: 28.8px;</string>
+        <string notr="true">QLabel {
+    font: 600 20pt &quot;Segoe UI&quot;;
+    color: #4154F1;   /* Azul igual al figma */
+}</string>
        </property>
        <property name="text">
         <string>Registro Asistencia</string>
@@ -39,16 +37,24 @@ line-height: 28.8px;</string>
        <item>
         <widget class="QComboBox" name="seleccione_curso">
          <property name="styleSheet">
-          <string notr="true">flex-shrink: 0;
-background: #FFF;
-width: 180px;
-height: 23px;
-color: #444;
-font-family: &quot;Open Sans&quot;;
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; </string>
+          <string notr="true">QComboBox {
+    border: 1px solid #d0d7e2;
+    border-radius: 8px;
+    padding: 6px 10px;
+    background-color: #ffffff;
+    color: #012970;
+    font-size: 14px;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 25px;
+}
+
+QComboBox:hover {
+    background-color: #F6F9FF;
+}
+</string>
          </property>
          <property name="placeholderText">
           <string>Seleccione Curso</string>
@@ -58,57 +64,109 @@ line-height: 24px; </string>
        <item>
         <widget class="QDateEdit" name="fecha_clase">
          <property name="styleSheet">
-          <string notr="true">flex-shrink: 0;
-background: #FFF;
-width: 180px;
-height: 26px;
-color: #444;
-font-family: &quot;Open Sans&quot;;
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; </string>
+          <string notr="true">QDateEdit {
+    border: 1px solid #d0d7e2;
+    border-radius: 8px;
+    padding: 6px 10px;
+    background-color: #ffffff;
+    color: #012970;
+    font-size: 14px;
+}
+
+/* Botón desplegable del calendario */
+QDateEdit::drop-down {
+    border: none;
+    width: 25px;
+}
+
+/* Hover igual que los demás */
+QDateEdit:hover {
+    background-color: #F6F9FF;
+}
+</string>
          </property>
          <property name="calendarPopup">
           <bool>true</bool>
          </property>
         </widget>
        </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
       </layout>
      </item>
      <item>
       <widget class="QTableView" name="tableView">
        <property name="styleSheet">
-        <string notr="true">border-radius: 8px;
-background: #FFF;
-display: flex;
-align-items: flex-start;
-flex-shrink: 0;</string>
+        <string notr="true">QTableView {
+    border: 1px solid #d0d7e2;
+    border-radius: 8px;
+    gridline-color: #d0d7e2;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #012970;
+    selection-background-color: #F6F9FF;
+    selection-color: #012970;
+}
+
+QHeaderView::section {
+    background-color: #F6F9FF;
+    color: #012970;
+    font-weight: bold;
+    padding: 6px;
+    border: none;
+    border-bottom: 1px solid #d0d7e2;
+}</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="guardar_asistencia">
-       <property name="styleSheet">
-        <string notr="true">display: flex;
-width: 150px;
-height: 20px;
-justify-content: center;
-align-items: center;
-flex-shrink: 0;
-border-radius: 8px;
-background: #4154F1;
-color: #FFF;
-font-family: Roboto;
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;</string>
-       </property>
-       <property name="text">
-        <string>Guardar asistencia</string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="guardar_asistencia">
+         <property name="styleSheet">
+          <string notr="true">QPushButton#guardar_asistencia {
+    border: none;
+    background-color: #4154F1;  /* Azul Figma */
+    color: white;
+    font: 10pt &quot;Segoe UI&quot;;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+QPushButton#guardar_asistencia:hover {
+    background-color: #2e3bd1;  /* Azul más oscuro al hover */
+}</string>
+         </property>
+         <property name="text">
+          <string>Guardar asistencia</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>88</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
      </item>
     </layout>
    </item>
