@@ -124,7 +124,7 @@ font: 700 18pt &quot;Segoe UI&quot;;</string>
          <string notr="true">background-color: rgb(246, 249, 255);</string>
         </property>
         <property name="currentIndex">
-         <number>4</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="Inicio">
          <layout class="QHBoxLayout" name="horizontalLayout_19"/>
@@ -243,46 +243,6 @@ font: 700 18pt &quot;Segoe UI&quot;;</string>
         <property name="spacing">
          <number>10</number>
         </property>
-        <item>
-         <widget class="QPushButton" name="inicio">
-          <property name="enabled">
-           <bool>true</bool>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    border: none;                 /* Sin borde */
-    background-color: white;      /* Fondo blanco por defecto */
-    color: #012970;               /* Texto azul oscuro */
-    padding: 8px 16px;
-    border-radius: 6px;           /* Opcional: esquinas redondeadas */
-}
-
-QPushButton:hover {
-    background-color: #F6F9FF;    /* Fondo hover */
-    color: #012970;               /* Texto hover */
-}
-
-QPushButton:pressed {
-    background-color: #e0e6f9;    /* Fondo al presionar (ligeramente más oscuro) */
-    color: #012970;
-}
-</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources/resources.qrc">
-            <normaloff>:/icons/icons/icons8-casa-50 (1).png</normaloff>:/icons/icons/icons8-casa-50 (1).png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
         <item>
          <widget class="QPushButton" name="curso">
           <property name="styleSheet">
@@ -615,43 +575,6 @@ color: #012970;</string>
          </layout>
         </item>
         <item>
-         <widget class="QPushButton" name="inicio_2">
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    border: none;                 /* Sin borde */
-    background-color: white;      /* Fondo blanco por defecto */
-    color: #012970;               /* Texto azul oscuro */
-    padding: 8px 16px;
-    border-radius: 6px;           /* Opcional: esquinas redondeadas */
-}
-
-QPushButton:hover {
-    background-color: #F6F9FF;    /* Fondo hover */
-    color: #012970;               /* Texto hover */
-}
-
-QPushButton:pressed {
-    background-color: #e0e6f9;    /* Fondo al presionar (ligeramente más oscuro) */
-    color: #012970;
-}
-</string>
-          </property>
-          <property name="text">
-           <string>Inicio</string>
-          </property>
-          <property name="icon">
-           <iconset resource="../resources/resources.qrc">
-            <normaloff>:/icons/icons/icons8-casa-50 (1).png</normaloff>:/icons/icons/icons8-casa-50 (1).png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
          <widget class="QPushButton" name="curso_2">
           <property name="styleSheet">
            <string notr="true">QPushButton {
@@ -966,38 +889,6 @@ QPushButton:pressed {
     <hint type="destinationlabel">
      <x>176</x>
      <y>104</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>inicio</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>inicio_2</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>141</x>
-     <y>64</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>188</x>
-     <y>78</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>inicio_2</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>inicio</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>178</x>
-     <y>83</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>123</x>
-     <y>70</y>
     </hint>
    </hints>
   </connection>
