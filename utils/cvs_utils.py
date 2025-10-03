@@ -1,6 +1,8 @@
 import csv
 from PyQt5.QtWidgets import QMessageBox
 
+
+
 def cargar_estudiantes_desde_csv(path, parent=None):
     estudiantes = []
     try:

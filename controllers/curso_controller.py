@@ -2,6 +2,7 @@
 from PyQt5 import QtWidgets, uic, QtCore
 from PyQt5.QtCore import QSortFilterProxyModel, Qt
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
+from PyQt5.QtWidgets import QHeaderView
 from models.course import Course
 
 
@@ -32,14 +33,27 @@ class CursoController(QtWidgets.QWidget):
         self.lista_cursos.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.lista_cursos.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
         self.lista_cursos.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.lista_cursos.horizontalHeader().setStretchLastSection(True)
-        self.lista_cursos.horizontalHeader().setSectionResizeMode(0, QtWidgets.QHeaderView.ResizeToContents)
-        self.lista_cursos.horizontalHeader().setSectionResizeMode(1, QtWidgets.QHeaderView.Stretch)
-        self.lista_cursos.horizontalHeader().setSectionResizeMode(2, QtWidgets.QHeaderView.ResizeToContents)
+
+        # Encabezados centrados y columnas proporcionales
+        hh = self.lista_cursos.horizontalHeader()
+        try:
+            hh.setDefaultAlignment(Qt.AlignCenter)
+        except AttributeError:
+            pass
+
+        hh.setStretchLastSection(False)
+        # Aunque solo se muestre "Nombre", aplicamos Stretch a todas para proporcionalidad
+        hh.setSectionResizeMode(0, QHeaderView.Stretch)  # ID (oculta)
+        hh.setSectionResizeMode(1, QHeaderView.Stretch)  # Nombre (visible)
+        hh.setSectionResizeMode(2, QHeaderView.Stretch)  # Tipo (oculta)
+        hh.setMinimumSectionSize(140)
 
         # Mostrar solo "Nombre": ocultar ID (col 0) y Tipo (col 2)
         self.lista_cursos.setColumnHidden(0, True)  # ID oculto
         self.lista_cursos.setColumnHidden(2, True)  # Tipo oculto
+
+        # Centrar contenido
+        self.lista_cursos.setTextElideMode(Qt.ElideNone)
 
         # Conexiones UI
         self.agregar_curso.clicked.connect(self.on_guardar)       # Guardar (crear/actualizar)
@@ -129,6 +143,7 @@ class CursoController(QtWidgets.QWidget):
         ]
         for it in row:
             it.setEditable(False)
+            it.setTextAlignment(Qt.AlignCenter)
         self.model.appendRow(row)
 
     def _actualizar_fila(self, curso: Course):
@@ -140,6 +155,8 @@ class CursoController(QtWidgets.QWidget):
                 self.model.setItem(r, 2, QStandardItem(curso.course_type or ""))
                 self.model.item(r, 1).setEditable(False)
                 self.model.item(r, 2).setEditable(False)
+                self.model.item(r, 1).setTextAlignment(Qt.AlignCenter)
+                self.model.item(r, 2).setTextAlignment(Qt.AlignCenter)
                 return
 
     def _eliminar_fila_por_id(self, course_id: int):
@@ -185,4 +202,5 @@ class CursoController(QtWidgets.QWidget):
         ]
         for it in row:
             it.setEditable(False)
+            it.setTextAlignment(Qt.AlignCenter)
         self.model.appendRow(row)
