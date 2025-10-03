@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>912</width>
+    <width>550</width>
     <height>559</height>
    </rect>
   </property>
@@ -20,14 +20,12 @@
    <item row="0" column="0">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QLabel" name="titulo_Registro_estudiantil">
+      <widget class="QLabel" name="titulo_registro_estudiantil">
        <property name="styleSheet">
-        <string notr="true">color: #4154F1;
-font-family: &quot;Open Sans&quot;;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px;</string>
+        <string notr="true">QLabel#titulo_registro_estudiantil {
+	font: 600 20pt &quot;Segoe UI&quot;;
+    color: #4154F1;   /* Azul igual al figma */
+}</string>
        </property>
        <property name="text">
         <string>Registro Estudiantil</string>
@@ -39,18 +37,20 @@ line-height: 24px;</string>
        <item>
         <widget class="QLineEdit" name="nombre_curso">
          <property name="styleSheet">
-          <string notr="true">border-radius: 4px;
-width: 100px;
-height: 27px;
-border: 1px solid #CED4DA;
-background: #FFF;
-color: #444;
+          <string notr="true">QLineEdit {
+    border: 1px solid #d0d7e2;
+    border-radius: 8px;
+    padding: 6px 10px;
+    background-color: #ffffff;
+    color: #012970;
+    font-size: 14px;
+}
 
-font-family: &quot;Open Sans&quot;;
-font-size: 13px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px;</string>
+QLineEdit:focus {
+    border: 1px solid #012970;
+    background-color: #F6F9FF;
+}
+</string>
          </property>
          <property name="text">
           <string/>
@@ -78,84 +78,152 @@ line-height: normal;</string>
          </property>
         </widget>
        </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
       </layout>
      </item>
      <item>
-      <widget class="QComboBox" name="selecionar_curso">
-       <property name="styleSheet">
-        <string notr="true">width: 100px;
-height: 25px;
-flex-shrink: 0;
-border-radius: 6px;
-border: 1px solid #CED4DA;
-background: #FFF;
-color: #444;
-font-family: &quot;Open Sans&quot;;
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px;</string>
-       </property>
-       <property name="placeholderText">
-        <string>Seleccione el curso</string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QComboBox" name="selecionar_curso">
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+    border: 1px solid #d0d7e2;
+    border-radius: 8px;
+    padding: 6px 10px;
+    background-color: #ffffff;
+    color: #012970;
+    font-size: 14px;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 25px;
+}
+
+QComboBox:hover {
+    background-color: #F6F9FF;
+}
+
+</string>
+         </property>
+         <property name="placeholderText">
+          <string>Seleccione el curso</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
      </item>
      <item>
       <widget class="QTableView" name="tableView">
        <property name="styleSheet">
-        <string notr="true">border-radius: 8px;
-background: #FFF;</string>
+        <string notr="true">QTableView {
+    border: 1px solid #d0d7e2;
+    border-radius: 8px;
+    gridline-color: #d0d7e2;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #012970;
+    selection-background-color: #F6F9FF;
+    selection-color: #012970;
+}
+
+QHeaderView::section {
+    background-color: #F6F9FF;
+    color: #012970;
+    font-weight: bold;
+    padding: 6px;
+    border: none;
+    border-bottom: 1px solid #d0d7e2;
+}</string>
        </property>
       </widget>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
-        <widget class="QPushButton" name="cargar_lista_estudiantes">
-         <property name="styleSheet">
-          <string notr="true">display: flex;
-width: 100px;
-height: 25px;
-justify-content: center;
-align-items: center;
-flex-shrink: 0;
-border-radius: 8px;
-background: #4154F1;
-color: #FFF;
-font-family: Roboto;
-font-size: 12px;
-font-style: normal;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Cargar lista de estudiantes </string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="guardar_lista_curso">
-         <property name="styleSheet">
-          <string notr="true">display: flex;
-width: 100px;
-height: 25px;
-justify-content: center;
-align-items: center;
-flex-shrink: 0;
-border-radius: 8px;
-background: #3BAE7E;
-color: #FFF;
-font-family: Roboto;
-font-size: 12px;
-font-style: normal;
-line-height: normal;</string>
-         </property>
-         <property name="text">
-          <string>Guardar lista del curso </string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QPushButton" name="cargar_lista_estudiantes">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#cargar_lista_estudiantes {
+    border: none;
+    background-color: #4154F1;  /* Azul Figma */
+    color: white;
+    font: 10pt &quot;Segoe UI&quot;;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+QPushButton#cargar_lista_estudiantes:hover {
+    background-color: #2e3bd1;  /* Azul más oscuro al hover */
+}</string>
+       </property>
+       <property name="text">
+        <string>Cargar lista de estudiantes </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="guardar_lista_curso">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#guardar_lista_curso {
+    border: none;
+    background-color: #3BAE7E;   /* Verde Figma */
+    color: white;
+    font: 10pt &quot;Segoe UI&quot;;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+QPushButton#guardar_lista_curso:hover {
+    background-color: #2d8f68;   /* Verde más oscuro al hover */
+}</string>
+       </property>
+       <property name="text">
+        <string>Guardar lista del curso </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
      </item>
     </layout>
    </item>

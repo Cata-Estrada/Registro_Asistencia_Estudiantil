@@ -6,18 +6,28 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>422</width>
     <height>317</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <widget class="QLabel" name="titulo_reportes_asistencias">
+       <property name="styleSheet">
+        <string notr="true">QLabel#titulo_reportes_asistencias {
+    font: 600 20pt &quot;Segoe UI&quot;;
+    color: #4154F1;   /* Azul igual al figma */
+}
+</string>
+       </property>
        <property name="text">
         <string>Reportes Asistencia</string>
        </property>
@@ -27,6 +37,26 @@
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QComboBox" name="selecione_curso">
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+    background-color: white;
+    color: #012970;
+    font: 10pt &quot;Segoe UI&quot;;
+    padding: 6px 10px;
+    border: 1px solid #d0d5dd;   /* Borde gris suave */
+    border-radius: 6px;
+}
+
+QComboBox:hover {
+    background-color: #F6F9FF;
+}
+
+QComboBox::drop-down {
+    border: none;
+    padding-right: 6px;
+}
+</string>
+         </property>
          <property name="placeholderText">
           <string>Seleccione curso</string>
          </property>
@@ -34,22 +64,103 @@
        </item>
        <item>
         <widget class="QPushButton" name="generar_reporte">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: none;
+    background-color: #4154F1;  /* Azul Figma */
+    color: white;
+    font: 10pt &quot;Segoe UI&quot;;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+QPushButton:hover {
+    background-color: #2e3bd1;  /* Azul más oscuro al hover */
+}
+</string>
+         </property>
          <property name="text">
           <string>Generar reporte</string>
          </property>
         </widget>
        </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>108</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
       </layout>
      </item>
      <item>
-      <widget class="QTableView" name="tableView"/>
+      <widget class="QTableView" name="tableView">
+       <property name="styleSheet">
+        <string notr="true">QTableView {
+    background-color: white;
+    gridline-color: #e0e6f9;   /* Líneas suaves */
+    border: none;
+    font: 10pt &quot;Segoe UI&quot;;
+    color: #012970;
+    selection-background-color: #F6F9FF;
+    selection-color: #012970;
+}
+
+QHeaderView::section {
+    background-color: #F6F9FF;
+    color: #012970;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    padding: 6px;
+    border: none;
+}
+</string>
+       </property>
+      </widget>
      </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QPushButton" name="exportar_reporte">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#exportar_reporte {
+    border: none;
+    background-color: #3BAE7E;   /* Verde Figma */
+    color: white;
+    font: 10pt &quot;Segoe UI&quot;;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+QPushButton#exportar_reporte:hover {
+    background-color: #2d8f68;   /* Verde más oscuro al hover */
+}
+</string>
+       </property>
        <property name="text">
         <string>Exportar Reporte</string>
        </property>
       </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
      </item>
     </layout>
    </item>

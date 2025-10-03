@@ -6,26 +6,240 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>397</width>
+    <height>330</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>140</y>
-     <width>191</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Curso</string>
-   </property>
-  </widget>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+    font: 600 20pt &quot;Segoe UI&quot;;
+    color: #4154F1;   /* Azul igual al figma */
+} </string>
+       </property>
+       <property name="text">
+        <string>Cursos</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>318</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0">
+    <widget class="QTableView" name="lista_cursos">
+     <property name="styleSheet">
+      <string notr="true">QTableView {
+    border: 1px solid #d0d7e2;
+    border-radius: 8px;
+    gridline-color: #d0d7e2;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #012970;
+    selection-background-color: #F6F9FF;
+    selection-color: #012970;
+}
+
+QHeaderView::section {
+    background-color: #F6F9FF;
+    color: #012970;
+    font-weight: bold;
+    padding: 6px;
+    border: none;
+    border-bottom: 1px solid #d0d7e2;
+}</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QPushButton" name="actualizar_curso">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    border: none;
+    background-color: #4154F1;  /* Azul Figma */
+    color: white;
+    font: 10pt &quot;Segoe UI&quot;;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+QPushButton:hover {
+    background-color: #2e3bd1;  /* Azul más oscuro al hover */
+}</string>
+         </property>
+         <property name="text">
+          <string>Actualizar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="eliminar_curso">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    border: none;
+    background-color: #F54927;  /* Azul Figma */
+    color: white;
+    font: 10pt &quot;Segoe UI&quot;;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+QPushButton:hover {
+    background-color: #DE2B00;  /* Azul más oscuro al hover */
+}</string>
+         </property>
+         <property name="text">
+          <string>Eliminar</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>228</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    border: 1px solid #d0d7e2;
+    border-radius: 8px;
+    padding: 6px 10px;
+    background-color: #ffffff;
+    color: #012970;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #012970;
+    background-color: #F6F9FF;
+}
+</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="agregar_curso">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: none;
+    background-color: #4154F1;  /* Azul Figma */
+    color: white;
+    font: 10pt &quot;Segoe UI&quot;;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+QPushButton:hover {
+    background-color: #2e3bd1;  /* Azul más oscuro al hover */
+}</string>
+         </property>
+         <property name="text">
+          <string>Guardar</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>18</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_2">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    border: 1px solid #d0d7e2;
+    border-radius: 8px;
+    padding: 6px 10px;
+    background-color: #ffffff;
+    color: #012970;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #012970;
+    background-color: #F6F9FF;
+}
+</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="buscar_curso">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: none;
+    background-color: #4154F1;  /* Azul Figma */
+    color: white;
+    font: 10pt &quot;Segoe UI&quot;;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+QPushButton:hover {
+    background-color: #2e3bd1;  /* Azul más oscuro al hover */
+}</string>
+         </property>
+         <property name="text">
+          <string>Buscar</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
