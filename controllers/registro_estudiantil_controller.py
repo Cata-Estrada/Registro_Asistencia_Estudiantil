@@ -8,6 +8,7 @@ from models.student import Student
 from models.enrollment import Enrollment
 # controllers/registro_estudiantil_controller.py
 from utils.cvs_utils import cargar_estudiantes_desde_csv
+from utils.paths import rel_path
 
 
 
@@ -21,7 +22,7 @@ class CenterAlignDelegate(QStyledItemDelegate):
 class RegistroEstudiantilController(QtWidgets.QWidget):
     def __init__(self, user_id):
         super().__init__()
-        uic.loadUi("views/registro_estudiantil.ui", self)
+        uic.loadUi(rel_path("views", "registro_estudiantil.ui"), self)
         self.user_id = user_id
 
         # Callback opcional para informar creación de cursos a otras vistas (inyectado desde el Dashboard)

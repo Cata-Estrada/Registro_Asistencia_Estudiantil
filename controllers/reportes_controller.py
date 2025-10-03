@@ -5,7 +5,7 @@ from PyQt5.QtCore import Qt
 from models.course import Course
 from models.attendance import Attendance
 from utils.export_utils import export_tableview_to_pdf
-
+from utils.paths import rel_path 
 
 class CenterAlignDelegate(QStyledItemDelegate):
     def initStyleOption(self, option, index):
@@ -16,7 +16,7 @@ class CenterAlignDelegate(QStyledItemDelegate):
 class ReportesController(QtWidgets.QWidget):
     def __init__(self, user_id):
         super().__init__()
-        uic.loadUi("views/reporte.ui", self)
+        uic.loadUi(rel_path("views", "reporte.ui"), self)
         self.user_id = user_id
         self.headers = [
             "Nombre Estudiante", "Presente", "Tarde", "Ausente",

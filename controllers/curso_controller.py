@@ -4,14 +4,14 @@ from PyQt5.QtCore import QSortFilterProxyModel, Qt
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from PyQt5.QtWidgets import QHeaderView
 from models.course import Course
-
+from utils.paths import rel_path
 
 class CursoController(QtWidgets.QWidget):
     curso_seleccionado_changed = QtCore.pyqtSignal(object)  # Emite el Course seleccionado o None
 
     def __init__(self, user_id: int):
         super().__init__()
-        uic.loadUi("views/curso.ui", self)
+        uic.loadUi(rel_path("views", "curso.ui"), self)
 
         # Estado
         self.user_id = user_id

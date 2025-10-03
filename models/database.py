@@ -1,22 +1,19 @@
+# models/database.py
 import sqlite3
-import os
-
-# Carpeta raíz del proyecto, un nivel arriba de 'models'
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB_NAME = os.path.join(BASE_DIR, 'asistencia.db')
+from utils.paths import db_path, seed_db_from_project
 
 def get_connection():
-    # Aquí se conecta o crea la base dentro de la carpeta de proyecto
-    return sqlite3.connect(DB_NAME)
+    # Asegura que exista una BD en la carpeta de datos de usuario
+    seed_db_from_project()
+    return sqlite3.connect(db_path())
 
 def create_tables():
-    # Crea las tablas del esquema
     conn = get_connection()
-    cursor = conn.cursor()
-    cursor.executescript("""
+    cur = conn.cursor()
+    cur.executescript("""
     CREATE TABLE IF NOT EXISTS Usuario (
         id_usuario INTEGER PRIMARY KEY AUTOINCREMENT,
-        nombre_usuario TEXT NOT NULL,
+        nombre_usuario TEXT NOT NULL UNIQUE,
         correo TEXT NOT NULL UNIQUE,
         contraseña TEXT NOT NULL
     );
@@ -55,7 +52,3 @@ def create_tables():
     """)
     conn.commit()
     conn.close()
-    print(f"Base de datos creada o actualizada en: {DB_NAME}")
-
-if __name__ == "__main__":
-    create_tables()

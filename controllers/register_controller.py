@@ -2,14 +2,14 @@ from PyQt5 import QtWidgets, uic
 from models.user import User
 import sys
 import os
-
+from utils.paths import rel_path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 
 class RegisterController(QtWidgets.QWidget):
     def __init__(self, on_register_done):
         super().__init__()
-        uic.loadUi("views/register.ui", self)
+        uic.loadUi(rel_path("views", "register.ui"), self)
         # Mostrar caracteres ocultos en el campo contraseña
         self.contrasena.setEchoMode(QtWidgets.QLineEdit.Password)
 

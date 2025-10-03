@@ -5,14 +5,15 @@ from controllers.registro_asistencia_controller import RegistroAsistenciaControl
 from controllers.historial_controller import HistorialController
 from controllers.reportes_controller import ReportesController
 from controllers.curso_controller import CursoController
-
+from utils.paths import rel_path
 
 class DashboardController(QtWidgets.QWidget):
     logout_signal = QtCore.pyqtSignal()  # señal para logout
 
     def __init__(self, user_id=None):
         super().__init__()
-        uic.loadUi("views/dashboard.ui", self)
+        uic.loadUi(rel_path("views", "dashboard.ui"), self)
+
 
         # Inicializar mostrando sidebar completo y ocultando compacto
         self.icon_only_widget.setVisible(False)

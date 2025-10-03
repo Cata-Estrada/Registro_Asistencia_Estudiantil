@@ -1,3 +1,4 @@
+# models/attendance.py
 from models.database import get_connection
 
 class Attendance:

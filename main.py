@@ -2,7 +2,8 @@ from PyQt5 import QtWidgets, QtCore
 from controllers.login_controller import LoginController
 from controllers.register_controller import RegisterController
 from controllers.dashboard_controller import DashboardController
-from resources import resources_rc
+from resources import resources_rc  # mantiene tus recursos compilados
+from models.database import create_tables  # agregado: inicializa BD
 
 
 def size_and_center(widget: QtWidgets.QWidget, w_ratio=0.7, h_ratio=0.7,
@@ -95,6 +96,9 @@ class MainWindow(QtWidgets.QMainWindow):
 
 if __name__ == "__main__":
     import sys
+
+    # Asegura que la base y las tablas existan antes de abrir UI (no cambia tu lógica)
+    create_tables()
 
     app = QtWidgets.QApplication(sys.argv)
     window = MainWindow()

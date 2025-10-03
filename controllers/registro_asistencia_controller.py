@@ -7,7 +7,7 @@ from models.course import Course
 from models.enrollment import Enrollment
 from models.class_session import ClassSession
 from models.attendance import Attendance
-
+from utils.paths import rel_path
 
 class ComboDelegate(QStyledItemDelegate):
     def createEditor(self, parent, option, index):
@@ -34,7 +34,7 @@ class CenterAlignDelegate(QStyledItemDelegate):
 class RegistroAsistenciaController(QtWidgets.QWidget):
     def __init__(self, user_id):
         super().__init__()
-        uic.loadUi("views/registro_asistencia.ui", self)
+        uic.loadUi(rel_path("views", "registro_asistencia.ui"), self)
         self.user_id = user_id
 
         # Modelo
